@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+  .container{
+    @apply px-3 mx-auto w-full sm:max-w-[600px] md:max-w-[740px] lg:max-w-[990px] xl:max-w-[1216px]
+  }
+    .btn{
+        @apply px-3 py-2 bg-secondary text-white border
+    }
+    .btn-sm{
+      @apply bg-secondary px-5 py-2 text-white rounded-[2px]
+  }
+    .form-group{
+      @apply mb-4
+  }
+  .form-label{
+      @apply block mb-1 capitalize
+  }
+  .form-control{
+      @apply  border-2 w-full px-2 py-1
+  }
+  .required-field{
+      @apply after:content-['_*'] after:text-red-500
+  }
+    
+}
+/* *{
+  background-color: rgba(255,0,0,0.05);
+} */
