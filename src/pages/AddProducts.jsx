@@ -59,6 +59,7 @@ export default function Addproduct() {
           />
         </div>
       </div>
+      
       <button className="btn">submit</button>
 
       {/* <Input name={"name"}/>

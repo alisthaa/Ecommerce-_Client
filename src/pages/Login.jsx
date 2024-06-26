@@ -10,7 +10,6 @@ import { useDispatch } from "react-redux";
 export default function Login() {
 const navigate = useNavigate()
 const dispatch = useDispatch()
-
   const handleSubmit = (e) =>{
     e.preventDefault()
     console.log("submitted");

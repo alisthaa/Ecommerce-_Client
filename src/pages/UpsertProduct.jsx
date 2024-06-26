@@ -61,9 +61,11 @@ export default function UpsertProduct() {
     formData.append("price", data.price);
     formData.append("description", data.description);
     formData.append("image", data.image);
+
     data.categories.forEach((cat) => {
       formData.append("categories", cat);
     });
+
     setisSubmitting(true);
     let url = "https://ecommerce-sagartmg2.vercel.app/api/products";
     let method = "post";
@@ -71,6 +73,7 @@ export default function UpsertProduct() {
       method = "put";
       url = "https://ecommerce-sagartmg2.vercel.app/api/products/" + _id;
     }
+
     axios[method](url, formData, {
       headers: {
         Authorization: `Bearer ${access_token}`,
@@ -99,7 +102,6 @@ export default function UpsertProduct() {
         toast.error("something went wrong");
       });
   };
-
   const handleChange = (e) => {
     setData({
       ...data,

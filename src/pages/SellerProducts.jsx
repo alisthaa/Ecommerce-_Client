@@ -10,7 +10,6 @@ export default function SellerProducts() {
 
   useEffect(() => {
     let access_token = localStorage.getItem("access_token");
-
     axios
       .get(`${API_URL}/products?sellerproducts`, {
         headers: {
